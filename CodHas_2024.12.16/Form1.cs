@@ -29,9 +29,6 @@ namespace CodHas_2024._12._16
             TextBox_Print.Text += $"{MyTemperature.GetType()}" + " " + "MyTemperature" + " " + $"{MyTemperature.ToString()}" + "\r\n";
             TextBox_Print.Text += $"{piValue.GetType()}" + " " + "piValue" + " " + $"{piValue.ToString()}" + "\r\n";
             TextBox_Print.Text += $"{productPrice.GetType()}" + " " + "productPrice" + " " + $"{productPrice.ToString()}" + "\r\n";
-            //TextBox_Print.Text = $"{AcademyAverageAge.GetType()}" + " " + "AcademyAverageAge" + " " + $"{AcademyAverageAge}";
-            //TextBox_Print.Text = $"{AcademyAverageAge.GetType()}" + " " + "AcademyAverageAge" + " " + $"{AcademyAverageAge}";
-
         }
     }
 }
