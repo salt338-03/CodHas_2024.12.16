@@ -93,9 +93,9 @@ namespace CodHas_2024._12._16
 
             int divisor = 2;
             int dividend = 11;
-            int[] Result = CalculateQuotientAndRemainder(divisor, dividend);
+            int[] Result = CalculateQuotientNRemainder(divisor, dividend);
 
-             int[] CalculateQuotientAndRemainder(int x, int y)
+             int[] CalculateQuotientNRemainder(int x, int y)
             {
                 int[] numbers = new int[2]; 
                 numbers[0] = y / x; // 몫
