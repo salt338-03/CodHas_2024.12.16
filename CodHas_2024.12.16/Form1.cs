@@ -15,40 +15,40 @@ namespace CodHas_2024._12._16
         public Form1()
         {
             InitializeComponent();
+            #region
+            //string GongJa = "멈추지 않는 한 얼마나 천천히 가는지는 중요하지 않다. -공자";
 
-            string GongJa = "멈추지 않는 한 얼마나 천천히 가는지는 중요하지 않다. -공자";
+            ////1
+            //int FirstResult;
+            //GongJa.IndexOf("-");
+            //FirstResult = GongJa.IndexOf("-");
+            //TextBox_Print.Text += GongJa.Remove(FirstResult, 3);
 
-            //1
-            int FirstResult;
-            GongJa.IndexOf("-");
-            FirstResult = GongJa.IndexOf("-");
-            TextBox_Print.Text += GongJa.Remove(FirstResult, 3);
+            ////2
+            //string[] SecondResult;
+            //int Start = GongJa.IndexOf("얼마나");
+            //int End = GongJa.LastIndexOf("가는지");
+            //string Practice = GongJa.Substring(Start, (End + 3) - Start);
+            //SecondResult = Practice.Split(' ');
+            //TextBox_Print.Text += "\r\n";
+            //for (int i = 0; i < SecondResult.Length; i++)
+            //{
+            //    TextBox_Print.Text += SecondResult[i] + "\r\n";
+            //}
 
-            //2
-            string[] SecondResult;
-            int Start = GongJa.IndexOf("얼마나");
-            int End = GongJa.LastIndexOf("가는지");
-            string Practice = GongJa.Substring(Start, (End + 3) - Start);
-            SecondResult = Practice.Split(' ');
-            TextBox_Print.Text += "\r\n";
-            for (int i = 0; i < SecondResult.Length; i++)
-            {
-                TextBox_Print.Text += SecondResult[i] + "\r\n";
-                //Console.WriteLine($"ArrayPractice[{i}] = {ArrayPractice[i]}");
-            }
-            //3
-            
-            int Dot = GongJa.IndexOf(".");
-            string ThirdResult1 = GongJa.Remove(Dot,1);
-            int Dash = ThirdResult1.IndexOf("-");
-            string ThirdResult2 = ThirdResult1.Remove(Dash,1);
-            ThirdResult2 = ThirdResult2.Replace(' ', ',');
-            TextBox_Print.Text += ThirdResult2;
+            ////3
+            //int Dot = GongJa.IndexOf(".");
+            //string ThirdResult1 = GongJa.Remove(Dot,1);
+            //int Dash = ThirdResult1.IndexOf("-");
+            //string ThirdResult2 = ThirdResult1.Remove(Dash,1);
+            //ThirdResult2 = ThirdResult2.Replace(' ', ',');
+            //TextBox_Print.Text += ThirdResult2;
 
 
             //int Start = GongJa.IndexOf("얼마나");
             //int End = GongJa.LastIndexOf("가는지");
             //string[] input = "이름, 나이, 전화번호".Split(',');
+            #endregion
 
 
             #region
@@ -91,6 +91,20 @@ namespace CodHas_2024._12._16
             ////TextBox_Print.Text += $"{productPrice.GetType()}" + " " + "productPrice" + " " + $"{productPrice.ToString()}" + "\r\n";
             #endregion
 
+            int divisor = 2;
+            int dividend = 11;
+            int[] Result = Calculate(divisor, dividend);
+
+             int[] Calculate(int x, int y)
+            {
+                int[] numbers = new int[2]; 
+                numbers[0] = y / x; // 몫
+                numbers[1] = y % x; // 나머지
+                return numbers; // 배열 반환
+            }
+            TextBox_Print.Text += $"{dividend}나누기{divisor}\r\n";
+            TextBox_Print.Text += $"몫 = {Result[0]} \r\n";
+            TextBox_Print.Text += $"나머지 = {Result[1]} \r\n";
 
         }
     }
