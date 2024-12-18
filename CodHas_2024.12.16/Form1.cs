@@ -15,6 +15,7 @@ namespace CodHas_2024._12._16
         public Form1()
         {
             InitializeComponent();
+            //1일
             #region
             //string GongJa = "멈추지 않는 한 얼마나 천천히 가는지는 중요하지 않다. -공자";
 
@@ -48,9 +49,8 @@ namespace CodHas_2024._12._16
             //int Start = GongJa.IndexOf("얼마나");
             //int End = GongJa.LastIndexOf("가는지");
             //string[] input = "이름, 나이, 전화번호".Split(',');
-            #endregion
-
-
+            #endregion //1일
+            //2일
             #region
             //string[] ArrayPractice = new string[10];
             //string[] input = "이름, 나이, 전화번호".Split(',');
@@ -89,22 +89,61 @@ namespace CodHas_2024._12._16
             ////TextBox_Print.Text += $"{MyTemperature.GetType()}" + " " + "MyTemperature" + " " + $"{MyTemperature.ToString()}" + "\r\n";
             ////TextBox_Print.Text += $"{piValue.GetType()}" + " " + "piValue" + " " + $"{piValue.ToString()}" + "\r\n";
             ////TextBox_Print.Text += $"{productPrice.GetType()}" + " " + "productPrice" + " " + $"{productPrice.ToString()}" + "\r\n";
-            #endregion
+            #endregion//2일
+            //3일
+            #region
+            //int divisor = 2;
+            //int dividend = 11;
+            //int[] Result = CalculateQuotientNRemainder(divisor, dividend);
 
-            int divisor = 2;
-            int dividend = 11;
-            int[] Result = CalculateQuotientNRemainder(divisor, dividend);
+            // int[] CalculateQuotientNRemainder(int x, int y)
+            //{
+            //    int[] numbers = new int[2]; 
+            //    numbers[0] = y / x; // 몫
+            //    numbers[1] = y % x; // 나머지
+            //    return numbers; // 배열 반환
+            //}
+            //TextBox_Print.Text += $"{dividend}나누기{divisor}\r\n";
+            //TextBox_Print.Text += $"몫 = {Result[0]} \r\n";
+            //TextBox_Print.Text += $"나머지 = {Result[1]} \r\n";
+            #endregion//3일
+            Random randomObj = new Random();
 
-             int[] CalculateQuotientNRemainder(int x, int y)
+
+
+            bool OrNot = CompareCoinFlipWithGuess(true);
+
+            bool CompareCoinFlipWithGuess(bool x)
             {
-                int[] numbers = new int[2]; 
-                numbers[0] = y / x; // 몫
-                numbers[1] = y % x; // 나머지
-                return numbers; // 배열 반환
+                int randomValue = randomObj.Next();
+                int value;
+                if (randomValue % 2 == 0)
+                {
+                    value = 0;
+                }
+                else
+                {
+                    value = 1;
+                }
+                int i = Convert.ToInt32(x);
+
+                if (value == i)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
-            TextBox_Print.Text += $"{dividend}나누기{divisor}\r\n";
-            TextBox_Print.Text += $"몫 = {Result[0]} \r\n";
-            TextBox_Print.Text += $"나머지 = {Result[1]} \r\n";
+            if (OrNot == true)
+            {
+                TextBox_Print.Text += $"당신이 이겼어요 :{OrNot}\r\n";
+            }
+            if (OrNot == false)
+            {
+                TextBox_Print.Text += $"당신이 짐 :{OrNot}\r\n";
+            }
 
         }
     }
